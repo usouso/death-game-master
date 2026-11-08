@@ -1,8 +1,9 @@
 # 報告 2026-11-08：デスゲーム主催者シミュレータ 試作 v4（最小の試作）
 
 依頼文 `../claude-package/PROMPT.md` の「会場3つ＋技4つ＋1日の流れが最後まで遊べる最小の試作」を作り、動く状態で確かめました。
-置き場所: `C:\Users\nonus\Downloads\death-game-claude-package\prototype\`（ローカル Git のみ。GitHub への作成・公開はしていません → 質問1）。
-遊び方: `node tools/serve.js` → http://127.0.0.1:8790/ （`index.html` を直接開いても動く）。`?seed=7&skip=1` でタイトルを飛ばして同じ試合を再現。
+**公開 URL: https://usouso.github.io/death-game-master/** （GitHub: https://github.com/usouso/death-game-master ・公開リポジトリ）。デスクトップに「デスゲーム主催者シミュレータ.url」を置きました。
+置き場所: 依頼主の「githubに公開して」の指示（2026-11-08）を受けて、おすすめだった **新規リポジトリ `usouso/death-game-master`** にしました（既存の death-game-tycoon は触っていません）。今後の作業コピーは `C:\dev\death-game-master`（同じ中身を `Downloads\death-game-claude-package\prototype\` にも残してあります。両方とも同じ GitHub を向いています）。
+遊び方: 公開 URL を開く。手元なら `node tools/serve.js` → http://127.0.0.1:8790/ （`index.html` を直接開いても動く）。`?seed=7&skip=1` でタイトルを飛ばして同じ試合を再現。
 
 ## やったこと
 
@@ -77,11 +78,10 @@
 
 答えやすいように選択肢を付けました。おすすめは ★。
 
-1. **作品の置き場所**（これが決まるまで GitHub には作っていません）
-   - A ★ 新しいリポジトリを作る（例: `usouso/death-game-master`。C:\dev\death-game-master に移して、GitHub Pages の公開 URL とデスクトップのショートカットも作る）
-   - B 既存の `usouso/death-game-tycoon` を作り直す（今の第3版は `v3/` に残して遊べるようにし、新版を index.html にする）
-   - C まだ決めない（今の Downloads の中で続ける）
-   - 補足: A か B なら「公開 URL（GitHub Pages）とデスクトップのショートカットを作っていいか」も一緒に教えてください（公開は許可なしにはしません）
+1. **作品の置き場所** → 「githubに公開して」の指示を受けて **A（新規 `usouso/death-game-master`、公開 URL とショートカットつき）で進めました**。確認だけお願いします
+   - A ★ このまま新規リポジトリで続ける（済み）
+   - B やっぱり既存の `usouso/death-game-tycoon` にまとめたい（第3版は `v3/` に残して、新版を index.html にする。death-game-master は消すか残すか）
+   - 補足: 公開リポジトリには、標準3文書のコピー（`docs/game-development/`、中に PC のパス `C:/Users/nonus/...` が書いてある）と REPORT.md も入っています。外した方がよければ言ってください
 2. **主催者キャラの名前と見た目**
    - A ★ 名前は仮に「主催者」のまま。絵は旧試作の正面3表情（紫髪・サングラス）を主催者カメラに使い続ける
    - B 基準イラストどおり「後ろ姿」の絵を新しく用意する（誰が描くか: Muse に頼む／ぼくくんが用意する）。用意されるまでは A
@@ -117,10 +117,10 @@
 - 既存作業・LOCK・スケジューラー確認: この試作は新規フォルダで、既存 repo（death-game-tycoon）は読んだだけで変更していない。LOCK なし
 - 変更理由と再現手順: `node tools/serve.js` → http://127.0.0.1:8790/?seed=7&skip=1 。1366×650 と 1920×910、マウス＋キー（1〜4, J K L）
 - 実行コマンド / 終了コード: `node tests.js` → 0（29/29）、`node bot/run.js --seeds 40` → 0、`node tools/check.js --seed 7 --days 2` → 下の検査結果
-- 実ゲームURLまたは起動ファイル: `prototype/index.html`（公開 URL なし）
+- 実ゲームURLまたは起動ファイル: https://usouso.github.io/death-game-master/ （main の最新 commit が1〜2分後に反映）／`index.html`
 - スクリーンショット・ログ: `prototype/screenshots/`（01-title, 02-play-a, 03-play-b, 04-dayend, 05-last × 3サイズ、check-report.json）
 - 標準の読了版・パス・日時: v1.2、C:\Users\nonus\Documents\GameDevelopment\GAME-DEVELOPMENT-STANDARD.md（sha256 先頭 874a32376352f229）、2026-11-08 08:10 JST ごろ
-- 次の担当と停止条件: 質問1〜5 の答え待ちで停止。独立レビュー担当は dot の指定待ち
+- 次の担当と停止条件: 質問2〜5 の答え待ちで停止（質問1は指示どおり新規 repo で公開済み）。独立レビュー担当は dot の指定待ち
 
 | 工程 | 状態 | 担当 | commit | 実測・証拠 |
 |---|---|---|---|---|
