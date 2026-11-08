@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>デスゲーム主催者シミュレータ（試作）</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="title" class="screen">
+  <div class="tbox">
+    <h1>デスゲーム主催者シミュレータ</h1>
+    <p class="sub">きみは参加者じゃない。<b>主催者</b>だ。3つの会場を同時に見張って、番組を盛り上げろ。</p>
+    <button id="startBtn" class="bigbtn">▶ シーズン開始</button>
+    <div class="howto">
+      <div>🎯 <b>技を押してから、会場（モニター）を押す</b>。技は、参加者が「跳んでいる・動いている・椅子から遠い」ときに当たる。</div>
+      <div>👻 参加者は必死によける。⚡すばしっこい・👁勘がいい・🔥警戒（技を見た人は、次はよけやすい）。脱落はポップにおばけ化。</div>
+      <div>📺 14日で <b>視聴率70・資金800</b> ならクリア。<b>疑惑度100で逮捕</b>。日の終わりに資金が0を切ったら破産。</div>
+    </div>
+    <div class="tinfo" id="seedInfo"></div>
+  </div>
+</div>
+
+<div id="game" class="screen hidden">
+  <header id="top">
+    <div class="daybox"><div class="d"><span id="dayNum">1</span><small>/14日</small></div><div class="t">残り <b id="dayTime">90</b> 秒</div></div>
+    <div class="gauge g-rating"><div class="lab"><span>📺 視聴率</span><b id="vRating">30</b><small>目標 70</small></div><div class="bar"><i></i><em class="goal" style="left:70%"></em></div></div>
+    <div class="gauge g-money"><div class="lab"><span>💰 資金</span><b id="vMoney">300</b><small>目標 800</small></div><div class="bar"><i></i><em class="goal" style="left:80%"></em></div></div>
+    <div class="gauge g-panic"><div class="lab"><span>💦 あわて度</span><b id="vPanic">10</b><small>60で技が遅れる</small></div><div class="bar"><i></i><em class="goal" style="left:60%"></em></div></div>
+    <div class="gauge g-susp"><div class="lab"><span>🚔 疑惑度</span><b id="vSusp">10</b><small>100で逮捕</small></div><div class="bar"><i></i></div></div>
+    <div class="speed"><button id="sp0" title="一時停止">⏸</button><button id="sp1" class="on">▶ 1倍</button><button id="sp2">⏩ 2倍</button></div>
+  </header>
+
+  <main id="monitors"></main>
+
+  <footer id="bottom">
+    <section id="skills">
+      <div class="ph">技 <small>（押してから会場を押す。キー 1〜4、会場は J K L）</small></div>
+      <div id="skillBar"></div>
+      <div id="hint">技を選ぶと、当たる相手がいる会場が光る</div>
+    </section>
+    <section id="host">
+      <div class="hcam"><img id="hostImg" src="assets/master-cool.png" alt=""><span class="hsweat" id="hostSweat">💦</span><div class="hlabel">主催者カメラ</div></div>
+      <div class="hsay" id="hostSay">ふふふ…今夜も完璧な興行にしてみせよう。</div>
+    </section>
+    <section id="logbox"><div class="ph">📣 実況ログ</div><div id="log"></div></section>
+  </footer>
+</div>
+
+<div id="modalWrap" class="hidden"><div id="modal"><h2 id="mTitle"></h2><div id="mText"></div><div id="mBtns"></div></div></div>
+
+<script src="sim.js"></script>
+<script src="ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+{
+  "seed": "7",
+  "url": "file:///C:/Users/nonus/Downloads/death-game-claude-package/prototype/index.html?auto=1&mute=1&bg=1&fast=4&seed=7",
+  "sizes": [
+    {
+      "size": "1920x910",
+      "errors": [],
+      "text": {
+        "overlaps": 3868,
+        "overflow": 0,
+        "scroll": 0,
+        "pairs": [
+          "💦 × ⚡",
+          "💦 × 💪",
+          "⚡ × 💪",
+          "🔥 × 💪",
+          "⚡ × 8秒",
+          "トラップ発動 × 8秒",
+          "💥 × 💥",
+          "⚡ × 7秒",
+          "トラップ発動 × 7秒",
+          "💥 × ❗"
+        ]
+      },
+      "shots": [
+        "screenshots\\01-title-1920x910.png",
+        "screenshots\\02-play-a-1920x910.png",
+        "screenshots\\03-play-b-1920x910.png",
+        "screenshots\\04-dayend-1920x910.png",
+        "screenshots\\05-last-1920x910.png"
+      ],
+      "checks": 411,
+      "final": {
+        "screen": "play",
+        "day": 3,
+        "dayT": 90,
+        "time": 179.99999999999406,
+        "rating": 57.868713387221966,
+        "money": 409,
+        "panic": 0,
+        "suspicion": 63.00000000000412,
+        "phase": "play",
+        "over": null,
+        "modal": false,
+        "ghosts": 37,
+        "fired": 20,
+        "hits": 22,
+        "dodges": 2,
+        "misses": 1
+      },
+      "ok": false
+    },
+    {
+      "size": "1366x650",
+      "errors": [],
+      "text": {
+        "overlaps": 5920,
+        "overflow": 0,
+        "scroll": 0,
+        "pairs": [
+          "💦 × ⚡",
+          "💦 × 💪",
+          "⚡ × 💪",
+          "🔥 × ⚡",
+          "🔥 × 🔥",
+          "🔥 × 💪",
+          "🔥 × 💥",
+          "💥 × 💥",
+          "💥 × ⚡",
+          "🔥 × ❗"
+        ]
+      },
+      "shots": [
+        "screenshots\\01-title-1366x650.png",
+        "screenshots\\02-play-a-1366x650.png",
+        "screenshots\\03-play-b-1366x650.png",
+        "screenshots\\04-dayend-1366x650.png",
+        "screenshots\\05-last-1366x650.png"
+      ],
+      "checks": 416,
+      "final": {
+        "screen": "play",
+        "day": 3,
+        "dayT": 90,
+        "time": 179.99999999999406,
+        "rating": 57.868713387221966,
+        "money": 409,
+        "panic": 0,
+        "suspicion": 63.00000000000412,
+        "phase": "play",
+        "over": null,
+        "modal": false,
+        "ghosts": 37,
+        "fired": 20,
+        "hits": 22,
+        "dodges": 2,
+        "misses": 1
+      },
+      "ok": false
+    },
+    {
+      "size": "375x812",
+      "errors": [],
+      "text": {
+        "overlaps": 637,
+        "overflow": 0,
+        "scroll": 0,
+        "pairs": [
+          "⚡ × 7秒",
+          "トラップ発動 × 7秒",
+          "⚡ × 6秒",
+          "トラップ発動 × 6秒",
+          "⚡ × 5秒",
+          "トラップ発動 × 5秒",
+          "⚡ × 4秒",
+          "トラップ発動 × 4秒",
+          "⚡ × 3秒",
+          "トラップ発動 × 3秒"
+        ]
+      },
+      "shots": [
+        "screenshots\\01-title-375x812.png",
+        "screenshots\\02-play-a-375x812.png",
+        "screenshots\\03-play-b-375x812.png",
+        "screenshots\\04-dayend-375x812.png",
+        "screenshots\\05-last-375x812.png"
+      ],
+      "checks": 421,
+      "final": {
+        "screen": "play",
+        "day": 3,
+        "dayT": 89.80000000000001,
+        "time": 180.19999999999405,
+        "rating": 57.83085414101309,
+        "money": 409,
+        "panic": 0,
+        "suspicion": 62.990000000004116,
+        "phase": "play",
+        "over": null,
+        "modal": false,
+        "ghosts": 37,
+        "fired": 20,
+        "hits": 22,
+        "dodges": 2,
+        "misses": 1
+      },
+      "ok": false
+    }
+  ]
+}
