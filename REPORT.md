@@ -111,7 +111,7 @@
 ## 引継ぎ（HANDOFF-TEMPLATE の形）
 
 - task ID: （dot が付ける）
-- repo / branch / commit / dirty変更: ローカル Git `prototype/` main / （最終 commit は末尾）/ なし
+- repo / branch / commit / dirty変更: ローカル Git `prototype/` master / d8811d8（この REPORT の commit は次の1つ）/ なし
 - 制作担当 / 独立担当 / dot: Claude（Claude Code, Fable 5.1）/ 未確保 / 未登録
 - 対象作業と除外範囲: 最小の試作（会場3・技4・14日）。音の組み込み・会場追加・参加者側画面は除外
 - 既存作業・LOCK・スケジューラー確認: この試作は新規フォルダで、既存 repo（death-game-tycoon）は読んだだけで変更していない。LOCK なし
