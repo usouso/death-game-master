@@ -15,7 +15,9 @@ const url = 'file:///' + path.join(__dirname, '..', 'index.html').replace(/\\/g,
 // ページ内で動かす検査：文字の行ごとの範囲を集めて、交差とはみ出しを数える（内側の overflow で隠れる部分は数えない。body の overflow:hidden は数える。消えかけ opacity<.3 と絵文字だけの印は除外）
 const TEXT_CHECK = `(() => {
   const rects = []; const vw = innerWidth, vh = innerHeight;
-  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  // モーダル（結果の画面）が出ている間は、その中の文字だけを見る（後ろの文字は不透明な箱に隠れている）
+  const modal = document.querySelector('#modalWrap'); const modalOpen = modal && getComputedStyle(modal).display !== 'none';
+  const walker = document.createTreeWalker(modalOpen ? document.querySelector('#modal') : document.body, NodeFilter.SHOW_TEXT);
   let node; while ((node = walker.nextNode())) {
     if (!node.nodeValue.trim()) continue; const el = node.parentElement; if (!el) continue;
     if (!/[0-9A-Za-z぀-ヿ㐀-鿿０-ｚ]/.test(node.nodeValue)) continue;   // 絵文字だけの印（⚡🔥💥 など）は文字として数えない
